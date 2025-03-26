@@ -2,7 +2,9 @@
 
 function TopBar() {
     return (
-        <div className='w-full flex gap-4 px-30 py-4 justify-between sticky top-0
+        <div className='hidden lg:flex justify-between
+                        w-full gap-4 px-30 py-4
+                        sticky top-0 z-100
                         bg-c-black-1 text-c-gold-1 drop-shadow-lg'>
             <div className="flex gap-4 items-center">
                 <span className="flex gap-2 items-center">

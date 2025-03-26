@@ -37,10 +37,12 @@
     h1 {
         font-family: var(--font-primary);
         font-size: var(--text-h1);
+        line-height: 100%;
     }
     h2 {
         font-family: var(--font-primary);
         font-size: var(--text-h2);
+        line-height: 100%;
     }
     h3 {
         font-family: var(--font-primary);
@@ -68,8 +70,15 @@
         font-family: var(--font-secondary);
         font-size: var(--text-regular);
     }
+
+    span {
+        font-family: var(--font-secondary);
+        font-size: var(--text-regular);
+    }
+
+    body {
+        background-color: var(--color-c-black-1);
+        color: var(--color-c-white-1);
+    }
 }
 
-body {
-    background-color: var(--color-c-black-1);
-}

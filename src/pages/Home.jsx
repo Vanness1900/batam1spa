@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import TopBar from '../components/TopBar.jsx'
-import Banner from '../components/Banner.jsx'
+import Banner from '../panels/Banner.jsx'
 import Footer from '../components/Footer.jsx'
-import AboutUs from '../components/AboutUs.jsx'
+import AboutUs from '../panels/AboutUs.jsx'
 
 import bannerImage from '../assets/banner_home.jpg'
 
