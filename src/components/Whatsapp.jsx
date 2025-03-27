@@ -3,7 +3,7 @@
 function Whatsapp(){
     return(
         <a href="https://wa.me/85129226" target="_blank" rel="noopener noreferrer">
-            <div className="flex items-center justify-center fixed bottom-8 right-8
+            <div className="flex items-center justify-center fixed bottom-8 right-8 z-100
                             size-16 rounded-full
                             bg-c-white-1 drop-shadow-lg hover:bg-c-gold-1 text-c-gold-1 hover:text-c-white-1">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-8">

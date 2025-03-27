@@ -1,0 +1,29 @@
+import AboutImage from '../assets/AboutImage.jpg'
+
+import ImageContainer from '../components/ImageContainer.jsx';
+import Button from '../components/Button.jsx';
+
+function AboutUs() {
+    return (
+        <div className="px-4 pb-4 pt-8 space-y-8 md:px-12 lg:px-30 lg:py-12
+                        lg:grid lg:grid-cols-2 lg:space-x-12 lg:items-center">
+            <div className="text-center space-y-8 lg:text-left">
+                <div className="space-y-4">
+                    <div className="space-y-2">
+                        <h6 className="uppercase">Our Story</h6>
+                        <h2 className="uppercase text-h3 lg:text-h2 text-c-gold-1">Sanctuary for the Body and Soul</h2>
+                    </div>
+                    <p>Experience the pinnacle of luxury at Batam1Spa, Batam’s 
+                        largest and most opulent spa, opening in 2025. Indulge 
+                        in world-class massages and holistic therapies within a 
+                        serene, state-of-the-art sanctuary designed for ultimate 
+                        relaxation and rejuvenation.</p>
+                </div>
+                <Button text="Explore Facilities"/>
+            </div>
+            <ImageContainer image={AboutImage} alt="Image of Batam1Spa's Lounge" />
+        </div>
+    );
+}
+
+export default AboutUs
