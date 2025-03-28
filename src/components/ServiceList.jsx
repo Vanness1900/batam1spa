@@ -5,7 +5,7 @@ function ServiceList({name, duration, price}){
         <div className="space-y-2 pb-4">
             <div>
                 <div className="flex justify-between items-end">
-                    <a href="#" alt={name}><h4 className="uppercase text-h5 md:text-h4 hover:text-c-gold-1">{name}</h4></a>
+                    <a href="#" alt={name}><h4 className="uppercase hover:text-c-gold-1">{name}</h4></a>
                     <h6>${price}</h6>
                 </div>
                 <div className="flex space-x-1 items-center text-c-black-4">

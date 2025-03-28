@@ -2,9 +2,10 @@
 
 @theme {
     --breakpoint-*: initial;
-    --breakpoint-sm: 480px;
+    --breakpoint-sm: 640px;
     --breakpoint-md: 768px;
-    --breakpoint-lg: 976px;
+    --breakpoint-lg: 1024px;
+    --breakpoint-xl: 1536px;
 
     --color-c-gold-1: #CDAC81;
     --color-c-brown-1: #6C4334;
@@ -19,66 +20,92 @@
     --font-secondary: "Nunito", "Helvetica", sans-serif;
     --font-tertiary: "Whisper", "Brush Script MT", cursive;
 
-    --text-h1: 64px;
-    --text-h2: 48px;
-    --text-h3: 32px;
-    --text-h4: 24px;
-    --text-h5: 20px;
-    --text-h6: 16px;
-
-    --text-large: 24px;
-    --text-medium: 20px;
-    --text-regular: 16px;
-    --text-small: 14px;
-    --text-tiny: 10px;
+    --text-c-p1: 24px;
+    --text-c-p2: 20px;
+    --text-c-p3: 16px;
+    --text-c-p4: 14px;
+    --text-c-p5: 12px;
+    --text-c-p6: 10px;
 }
 
 @layer base {
     h1 {
         font-family: var(--font-primary);
-        font-size: var(--text-h1);
+        font-size: var(--text-4xl);
         line-height: 100%;
     }
     h2 {
         font-family: var(--font-primary);
-        font-size: var(--text-h2);
+        font-size: var(--text-3xl);
         line-height: 100%;
     }
     h3 {
         font-family: var(--font-primary);
-        font-size: var(--text-h3);
+        font-size: var(--text-2xl);
     }
     h4 {
         font-family: var(--font-primary);
-        font-size: var(--text-h4);
+        font-size: var(--text-xl);
     }
     h5 {
         font-family: var(--font-primary);
-        font-size: var(--text-h5);
+        font-size: var(--text-lg);
     }
     h6 {
         font-family: var(--font-primary);
-        font-size: var(--text-h6);
+        font-size: var(--text-base);
     }
 
     p {
         font-family: var(--font-secondary);
-        font-size: var(--text-regular);
+        font-size: var(--text-c-p3);
     }
 
     a {
         font-family: var(--font-secondary);
-        font-size: var(--text-regular);
+        font-size: var(--text-c-p3);
     }
 
     span {
         font-family: var(--font-secondary);
-        font-size: var(--text-regular);
+        font-size: var(--text-c-p3);
     }
 
     body {
         background-color: var(--color-c-black-1);
         color: var(--color-c-white-1);
     }
+
+
+    @media (min-width: 768px) {
+        h1 { font-size: var(--text-5xl); }
+        h2 { font-size: var(--text-4xl); }
+        h3 { font-size: var(--text-3xl); }
+        h4 { font-size: var(--text-2xl); }
+        h5 { font-size: var(--text-xl); }
+        h6 { font-size: var(--text-lg); }
+        p, a { font-size: var(--text-c-p3); }
+    }
+
+    @media (min-width: 1024px) {
+        h1 { font-size: var(--text-6xl); }
+        h2 { font-size: var(--text-4xl); }
+        h3 { font-size: var(--text-3xl); }
+        h4 { font-size: var(--text-2xl); }
+        h5 { font-size: var(--text-xl); }
+        h6 { font-size: var(--text-lg); }
+        p, a { font-size: var(--text-c-p3); }
+    }
+    
+    @media (min-width: 1536px) {
+        h1 { font-size: var(--text-8xl); }
+        h2 { font-size: var(--text-5xl); }
+        h3 { font-size: var(--text-4xl); }
+        h4 { font-size: var(--text-3xl); }
+        h5 { font-size: var(--text-2xl); }
+        h6 { font-size: var(--text-xl); }
+        p, a { font-size: var(--text-c-p2); }
+    }
 }
+
 

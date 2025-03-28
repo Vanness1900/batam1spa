@@ -9,6 +9,7 @@ import Whatsapp from '../components/Whatsapp.jsx'
 import About from '../sections/About.jsx'
 import Stats from '../sections/Stats.jsx'
 import Services from '../sections/Services.jsx'
+import FAQ from '../sections/FAQ.jsx'
 
 
 
@@ -25,6 +26,7 @@ function Home() {
         <About />
         <Stats />
         <Services />
+        <FAQ />
 
 
         <Footer />
