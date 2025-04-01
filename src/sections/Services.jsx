@@ -10,8 +10,8 @@ function Services(){
                         py-8 space-y-8
                         lg:py-12 lg:space-x-12
                         xl:py-12">
-            <div>
-                <ImageContainer image={ServicesImage} altText="Batam1Spa Service"/>
+            <div >
+                <ImageContainer image={ServicesImage} altText="Batam1Spa Service" aspectRatio="3/2" />
             </div>
             <div className="space-y-8">
                 <div className="space-y-2">
