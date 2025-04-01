@@ -6,7 +6,7 @@ function Header() {
     return (
     <header>
         <nav className="hidden lg:flex justify-between
-                        gap-4 px-30 py-12 ">
+                        gap-4 px-32 xl:px-48 py-12 ">
             <img src={HeaderLogoType} alt="Batam1Spa's Logo" className='h-[32px]' />
             <ul className="flex gap-4">
                 <ButtonHeader page="HOME" />

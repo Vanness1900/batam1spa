@@ -16,7 +16,7 @@ function FAQ() {
 
 
     return(
-        <div className="p-4 space-y-8">
+        <div className="py-8 space-y-8">
             <div className="space-y-2">
                 <h6 className="uppercase">FAQ</h6>
                 <h2 className="uppercase text-c-gold-1">Questions</h2>

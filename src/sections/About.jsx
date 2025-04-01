@@ -6,9 +6,9 @@ import Button from '../components/Button.jsx';
 function AboutUs() {
     return (
         <div className="lg:grid lg:grid-cols-2 lg:items-center
-                        px-4 pb-4 pt-8 space-y-8 md:px-12 
-                        lg:px-32 lg:py-12 lg:space-x-12
-                        xl:px-48 xl:py-12">
+                        py-8 space-y-8
+                        lg:py-12 lg:space-x-12
+                        xl:py-12">
             <div className="text-center space-y-8 lg:text-left">
                 <div className="space-y-4">
                     <div className="space-y-2">

@@ -24,11 +24,11 @@ const AccordionSection = ({section, isSelected, setActiveIndex, sectionIndex}) =
             </div>
             <div className="h-[1px] w-full bg-c-gold-1"></div>
             <div
-                className={`transition-all duration-300 ease-in-out overflow-hidden ${
+                className={`transition-all duration-300 constant overflow-hidden ${
                     isSelected ? 'max-h-96 opacity-100 py-4' : 'max-h-0 opacity-0'
                 }`}
             >
-                <p className="text-c-black-4">{section.answer}</p>
+                <p className="px-4 text-c-black-4">{section.answer}</p>
             </div>
         </div>
     );

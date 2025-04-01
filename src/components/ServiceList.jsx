@@ -2,7 +2,7 @@
 
 function ServiceList({name, duration, price}){
     return(
-        <div className="space-y-2 pb-4">
+        <div className="space-y-2 pt-4">
             <div>
                 <div className="flex justify-between items-end">
                     <a href="#" alt={name}><h4 className="uppercase hover:text-c-gold-1">{name}</h4></a>

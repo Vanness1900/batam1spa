@@ -2,7 +2,7 @@
 
 function Stats(){
     return(
-        <div className="px-4 grid h-48 grid-cols-2 place-content-evenly
+        <div className="grid h-48 grid-cols-2 place-content-evenly
                         md:grid-cols-4 md:h-32 md:px-12 lg:px-30">
             <div className="relative justify-center items-center">
                 <span className="absoulte inset-0 flex justify-center items-center font-tertiary text-7xl lg:text-8xl xl:text-[128px] text-c-black-2">128</span>
