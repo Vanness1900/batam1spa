@@ -1,6 +1,9 @@
+import { Link } from 'react-router-dom'
+
 import HeaderLogoType from '../assets/White_Logotype_Left_150DPI.png'
 import HeaderLogoMark from '../assets/Pure_White_Mark_150DPI.png'
 import ButtonHeader from './ButtonHeader.jsx'
+
 
 function Header() {
     return (
@@ -9,10 +12,18 @@ function Header() {
                         gap-4 px-32 xl:px-48 py-12 ">
             <img src={HeaderLogoType} alt="Batam1Spa's Logo" className='h-[32px]' />
             <ul className="flex gap-4">
-                <ButtonHeader page="HOME" />
-                <ButtonHeader page="FACILITIES" />
-                <ButtonHeader page="SERVICES" />
-                <ButtonHeader page="CONTACT" />
+                <Link to="/">
+                    <button>Home</button>
+                </Link>
+                <Link to="/Facilities">
+                    <button>Facilities</button>
+                </Link>
+                <Link to="/Services">
+                    <button>Services</button>
+                </Link>
+                <Link to="/Contact">
+                    <button>Contact</button>
+                </Link>
             </ul>
         </nav>
 

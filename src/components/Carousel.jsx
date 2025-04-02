@@ -21,23 +21,24 @@ const Carousel = ({ sections }) => {
     }, [sections.length]);
 
     return (
-        <div className="relative w-full overflow-hidden">
+        <div className="relative w-full overflow-hidden " onClick={(e) => e.stopPropagation()}>
             {/* Sliding Container */}
             <div 
                 className="flex transition-transform ease-out duration-500"
                 style={{ transform: `translateX(-${current * 100}%)` }}
             >
-                {sections.map(({ src, alt }, index) => (
-                    <div key={index} className="flex-shrink-0 w-full aspect-3/2">
-                        <ImageContainer image={src} altText={alt} aspectRatio="3/2"/>
-                    </div>
-                ))}
+                            {sections.map(({ src, alt }, index) => (
+                <div key={index} className="flex-shrink-0 w-full aspect-3/2">
+                    <ImageContainer image={src} altText={alt} aspectRatio="3/2" disableModal={true}/>
+                </div>
+            ))}
+
             </div>
 
             {/* Navigation Buttons */}
             <button 
                 onClick={previous} 
-                className="absolute left-2 top-1/2 -translate-y-1/2 text-c-gold-1 bg-c-black-1/75 hover:bg-black hover:scale-110 transition-all duration-300 ease-in-out p-2 rounded-full"
+                className="absolute left-2 top-1/2 -translate-y-1/2 text-c-white-1 bg-c-black-1/75 hover:bg-black hover:text-c-gold-1 hover:scale-110 transition-all duration-300 ease-in-out p-2 rounded-full"
             >
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
@@ -46,7 +47,7 @@ const Carousel = ({ sections }) => {
 
             <button 
                 onClick={next} 
-                className="absolute right-2 top-1/2 -translate-y-1/2 text-c-gold-1 bg-c-black-1/75 hover:bg-black hover:scale-110 transition-all duration-300 ease-in-out p-2 rounded-full"
+                className="absolute right-2 top-1/2 -translate-y-1/2 text-c-white-1 bg-c-black-1/75 hover:bg-black hover:text-c-gold-1 hover:scale-110 transition-all duration-300 ease-in-out p-2 rounded-full"
             >
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
                     <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
@@ -74,6 +75,7 @@ const Carousel = ({ sections }) => {
                         />
                     </div>
                 ))}
+                
             </div>
         </div>
     );

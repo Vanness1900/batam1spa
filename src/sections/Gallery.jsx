@@ -51,9 +51,9 @@ const Images = [
 
 function Gallery() {
     return(
-        <div className="py-8 space-y-8
-                        lg:py-12 lg:space-x-12
-                        xl:py-12">
+        <div className="
+            py-8 lg:py-12 xl:py-18
+            ">
             <div className="space-y-8">
                 <div className="space-y-4">
                     <div className="space-y-2">

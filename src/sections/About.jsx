@@ -6,9 +6,10 @@ import Button from '../components/Button.jsx';
 function AboutUs() {
     return (
         <div className="lg:grid lg:grid-cols-2 lg:items-center
-                        py-8 space-y-8
-                        lg:py-12 lg:space-x-12
-                        xl:py-12">
+                        py-8 lg:py-12 xl:py-18
+                        space-y-8 lg:space-y-0
+                        lg:gap-12 xl:gap-24
+                        ">
             <div className="text-center space-y-8 lg:text-left">
                 <div className="space-y-4">
                     <div className="space-y-2">
@@ -23,7 +24,7 @@ function AboutUs() {
                 </div>
                 <Button text="Explore Facilities"/>
             </div>
-            <ImageContainer image={AboutImage} alt="Image of Batam1Spa's Lounge" />
+            <ImageContainer image={AboutImage} alt="Image of Batam1Spa's Lounge" aspectRatio="3/2" disableModal={true} />
         </div>
     );
 }
