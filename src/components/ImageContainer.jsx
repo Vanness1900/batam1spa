@@ -7,8 +7,9 @@ function ImageContainer({ image, altText = "Batam1Spa Image", aspectRatio = "1/1
     return (
         <div className={`
             relative w-full mx-auto overflow-hidden rounded-2xl
-            aspect-${aspectRatio} lg:aspect-${lgAspectRatio}
-        `}>
+            ${aspectRatio === "1/1" ? "aspect-[1/1]" : "aspect-[3/2]"} // Use explicit Tailwind classes
+            ${lgAspectRatio === "1/1" ? "lg:aspect-[1/1]" : "lg:aspect-[3/2]"}
+            `}>
             <img 
                 src={image} 
                 alt={altText} 

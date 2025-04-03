@@ -2,7 +2,8 @@
 
 function Stats(){
     return(
-        <div className="grid h-48 grid-cols-2 md:grid-cols-4 place-content-evenly 
+        <div    id="Stats"
+                className="grid h-48 grid-cols-2 md:grid-cols-4 place-content-evenly 
                         gap-4 lg:gap-12 xl:gap-24
                         md:h-32
                         my-4 lg:my-8

@@ -5,7 +5,8 @@ import Button from '../components/Button.jsx';
 
 function AboutUs() {
     return (
-        <div className="lg:grid lg:grid-cols-2 lg:items-center
+        <div    id="About" 
+                className="lg:grid lg:grid-cols-2 lg:items-center
                         py-8 lg:py-12 xl:py-18
                         space-y-8 lg:space-y-0
                         lg:gap-12 xl:gap-24

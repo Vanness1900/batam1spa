@@ -11,6 +11,7 @@ import Stats from '../sections/Stats.jsx'
 import Services from '../sections/Services.jsx'
 import Gallery from '../sections/Gallery.jsx'
 import FAQ from '../sections/FAQ.jsx'
+import CTA from '../sections/CTA.jsx'
 
 
 
@@ -28,6 +29,7 @@ function Home() {
             <Services />
             <Gallery />
             <FAQ />
+            <CTA />
         </div>
 
 

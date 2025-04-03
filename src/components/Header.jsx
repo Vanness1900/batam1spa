@@ -8,21 +8,22 @@ import ButtonHeader from './ButtonHeader.jsx'
 function Header() {
     return (
     <header>
+        
         <nav className="hidden lg:flex justify-between
                         gap-4 px-32 xl:px-48 py-12 ">
             <img src={HeaderLogoType} alt="Batam1Spa's Logo" className='h-[32px]' />
             <ul className="flex gap-4">
                 <Link to="/">
-                    <button>Home</button>
+                    <button className="px-8 border-b-1">Home</button>
                 </Link>
                 <Link to="/Facilities">
-                    <button>Facilities</button>
+                    <button className="px-8 border-b-1">Facilities</button>
                 </Link>
                 <Link to="/Services">
-                    <button>Services</button>
+                    <button className="px-8 border-b-1">Services</button>
                 </Link>
                 <Link to="/Contact">
-                    <button>Contact</button>
+                    <button className="px-8 border-b-1">Contact</button>
                 </Link>
             </ul>
         </nav>

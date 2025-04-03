@@ -26,16 +26,22 @@ function FAQ() {
 
 
     return(
-        <div className=" lg:grid lg:grid-cols-2 lg:gap-24 items-center">
-            <div className="py-8 space-y-8">
-                <div className="space-y-2">
-                    <h6 className="uppercase">FAQ</h6>
-                    <h2 className="uppercase text-c-gold-1">Questions</h2>
+        <div    id="FAQ"
+                className=" lg:grid lg:grid-cols-2 items-center
+                        pt-8 lg:py-12 xl:py-18
+                        space-y-8 lg:space-y-0
+                        lg:gap-12 xl:gap-24">
+            <div>
+                <div className="space-y-8">
+                    <div className="space-y-2">
+                        <h6 className="uppercase">FAQ</h6>
+                        <h2 className="uppercase text-c-gold-1">Questions</h2>
+                    </div>
+                    <Accordion sections={FAQData} />
                 </div>
-                <Accordion sections={FAQData} />
             </div>
                 <div className="hidden lg:block">
-                    <ImageContainer image={FAQImage}  altText="Batam1Spa Service" aspectRatio="3/2" disableModal={true}/>
+                    <ImageContainer image={FAQImage}  altText="Batam1Spa Service" lgAspectRatio="1/1" disableModal={true}/>
                 </div>
         </div>
     );

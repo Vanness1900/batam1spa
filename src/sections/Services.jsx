@@ -6,7 +6,8 @@ import ServiceList from '../components/ServiceList.jsx';
 
 function Services() {
     return (
-        <div className="
+        <div    id="Services"
+            className="
             lg:grid lg:grid-cols-2 lg:items-center
             py-8 lg:py-12 xl:py-18
             space-y-8 lg:space-y-0
