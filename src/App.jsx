@@ -1,12 +1,14 @@
-import { useState } from 'react'
+import { BrowserRouter as Router } from "react-router-dom";
+
 import './App.css'
-import Home from './pages/Home.jsx'
+import RouterConfig from './RouterConfig.jsx';
 
 function App() {
   return (
-    <>
-      <Home />
-    </>
+    <Router>
+      {/* Manage routes */}
+      <RouterConfig />
+    </Router>
   )
 }
 

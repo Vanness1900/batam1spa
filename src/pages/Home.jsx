@@ -12,14 +12,10 @@ import Services from '../sections/Services.jsx'
 import Gallery from '../sections/Gallery.jsx'
 import FAQ from '../sections/FAQ.jsx'
 
-
-
-
 function Home() {
 
     return (
     <>
-        
         <TopBar />
         <Hero image={bannerImage} text={"UNPARALLELED SPA LUXURY"}/>
         <Whatsapp />
@@ -31,7 +27,6 @@ function Home() {
             <Gallery />
             <FAQ />
         </div>
-
 
         <Footer />
     </>
