@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 
-import Logo from '../assets/Gold_Horizontal_Primary_150DPI.png'
+import Logo from '../../assets/Gold_Horizontal_Primary_150DPI.png'
 
 function Footer() {
     return(

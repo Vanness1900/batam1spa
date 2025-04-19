@@ -1,10 +1,9 @@
-import CardGallery from "../components/CardGallery.jsx";
-import MasonryGrid from "../components/MasonryGrid.jsx";
-import Carousel from "../components/Carousel.jsx";
+import CardGallery from "../../components/cards/CardGallery.jsx";
+import MasonryGrid from "../../components/grids/MasonryGrid.jsx";
+import Carousel from "../../components/grids/Carousel.jsx";
 
-import GallerySquare from "../assets/GallerySquare.jpg";
-import GalleryVertical from "../assets/GalleryVertical.jpg";
-import GalleryHorizontal from "../assets/GalleryHorizontal.jpg";
+import GallerySquare from "../../assets/GallerySquare.jpg";
+import GalleryVertical from "../../assets/GalleryVertical.jpg";
 
 const Images = [
     {src: GallerySquare,

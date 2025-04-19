@@ -1,8 +1,9 @@
-import ServicesImage from '../assets/ServicesImage.jpg';
+import ServicesImage from '../../assets/ServicesImage.jpg';
 
-import ImageContainer from '../components/ImageContainer.jsx';
-import Button from '../components/Button.jsx';
-import ServiceList from '../components/ServiceList.jsx';
+import ImageContainer from '../../components/ui/ImageContainer.jsx'
+;
+import Button from '../../components/common/Button.jsx';
+import ServiceList from '../../components/cards/ServiceList.jsx';
 
 function Services() {
     return (

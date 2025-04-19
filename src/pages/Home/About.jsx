@@ -1,7 +1,8 @@
-import AboutImage from '../assets/AboutImage.jpg'
+import AboutImage from '../../assets/AboutImage.jpg'
 
-import ImageContainer from '../components/ImageContainer.jsx';
-import Button from '../components/Button.jsx';
+import ImageContainer from '../../components/ui/ImageContainer.jsx'
+
+import Button from '../../components/common/Button.jsx';
 
 function AboutUs() {
     return (

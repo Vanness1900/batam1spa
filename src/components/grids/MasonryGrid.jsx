@@ -1,4 +1,4 @@
-import CardGallery from "./CardGallery.jsx"
+import CardGallery from "../cards/CardGallery.jsx"
 
 const MasonryGrid = ({sections}) => {
     return <div className="columns-1 md:columns-2 lg:columns-4 gap-8">

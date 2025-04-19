@@ -1,7 +1,8 @@
-import Accordion from '../components/Accordion.jsx'
-import ImageContainer from '../components/ImageContainer.jsx';
+import Accordion from '../ui/Accordion.jsx'
+import ImageContainer from '../ui/ImageContainer.jsx'
+;
 
-import FAQImage from '../assets/FAQImage.jpg'
+import FAQImage from '../../assets/FAQImage.jpg'
 
 const FAQData = [
     {question: "Can I book a spa treatment on-site?",

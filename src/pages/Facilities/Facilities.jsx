@@ -1,11 +1,11 @@
-import Hero from "../../components/secttions/Hero.jsx";
-import Header from "../components/Header";
+import Hero from "../../components/sections/Hero.jsx";
+import NavBar from "../../components/sections/NavBar.jsx";
 
 function Facilities() {
     return (
         <>
             <Hero image="/path/to/image.jpg" text="Welcome to Batam1Spa">
-                <Header />
+                <NavBar />
             </Hero>
 
             {/* Other content below hero */}

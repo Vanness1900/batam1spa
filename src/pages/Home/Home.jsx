@@ -2,9 +2,9 @@ import { useState } from 'react'
 
 import bannerImage from '../../assets/BannerHome.jpg'
 
-import Hero from '../../sections/Hero.jsx'
-import Footer from '../components/Footer.jsx'
-import Whatsapp from '../components/Whatsapp.jsx'
+import Hero from '../../components/sections/Hero.jsx'
+import Footer from '../../components/sections/Footer.jsx'
+import Whatsapp from '../../components/common/Whatsapp.jsx'
 
 import About from './About.jsx'
 import Stats from './Stats.jsx'

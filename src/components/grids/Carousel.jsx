@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import ImageContainer from "../common/ImageContainer.jsx";
+import ImageContainer from "../ui/ImageContainer.jsx";
 
 const Carousel = ({ sections }) => {
     const [current, setCurrent] = useState(0);

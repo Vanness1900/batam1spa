@@ -1,7 +1,8 @@
-import ImageContainer from '../components/ImageContainer.jsx'
-import Button from '../components/Button.jsx'
+import ImageContainer from '../ui/ImageContainer.jsx'
 
-import CTAImage from '../assets/CTAImage.jpg'
+import Button from '../common/Button.jsx'
+
+import CTAImage from '../../assets/CTAImage.jpg'
 
 function CTA () {
     return(

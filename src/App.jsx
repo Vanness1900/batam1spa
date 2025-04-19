@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { HashRouter as Router, Routes,Route } from 'react-router-dom'
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css'
 
 import Home from './pages/Home/Home.jsx'
@@ -15,7 +15,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route element={<Layout/>}>
+        <Route element={<MainLayout/>}>
           <Route path="/" element={<Home />} />
           <Route path="/Facilities" element={<Facilities />} />
           <Route path="/Services" element={<Services />} />
