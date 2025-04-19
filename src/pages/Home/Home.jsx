@@ -1,17 +1,17 @@
 import { useState } from 'react'
 
-import bannerImage from '../assets/BannerHome.jpg'
+import bannerImage from '../../assets/BannerHome.jpg'
 
-import Hero from '../sections/Hero.jsx'
+import Hero from '../../sections/Hero.jsx'
 import Footer from '../components/Footer.jsx'
 import Whatsapp from '../components/Whatsapp.jsx'
 
-import About from '../sections/About.jsx'
-import Stats from '../sections/Stats.jsx'
-import Services from '../sections/Services.jsx'
-import Gallery from '../sections/Gallery.jsx'
-import FAQ from '../sections/FAQ.jsx'
-import CTA from '../sections/CTA.jsx'
+import About from './About.jsx'
+import Stats from './Stats.jsx'
+import Services from './Services.jsx'
+import Gallery from './Gallery.jsx'
+import FAQ from '../../components/sections/FAQ.jsx'
+import CTA from '../../components/sections/CTA.jsx'
 
 
 

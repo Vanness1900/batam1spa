@@ -2,14 +2,14 @@ import { useState } from 'react'
 import { HashRouter as Router, Routes,Route } from 'react-router-dom'
 import './App.css'
 
-import Home from './pages/Home.jsx'
-import Facilities from './pages/Facilities.jsx'
-import Services from './pages/Services.jsx'
-import Contact from './pages/Contact.jsx'
-import Cart from './pages/Cart.jsx'
-import Confirmation from './pages/Confirmation.jsx'
+import Home from './pages/Home/Home.jsx'
+import Facilities from './pages/Facilities/Facilities.jsx'
+import Services from './pages/Services/Services.jsx'
+import Contact from './pages/Contact/Contact.jsx'
+import Cart from './pages/Cart/Cart.jsx'
+import Confirmation from './pages/Confirmation/Confirmation.jsx'
 
-import Layout from './Layout.jsx'
+import MainLayout from './layouts/MainLayout.jsx'
 
 function App() {
   return (
