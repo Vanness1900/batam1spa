@@ -1,18 +1,30 @@
-import HeaderLogoType from '../assets/White_Logotype_Left_150DPI.png'
-import HeaderLogoMark from '../assets/Pure_White_Mark_150DPI.png'
-import ButtonHeader from './ButtonHeader.jsx'
+import { Link } from 'react-router-dom'
 
-function Header() {
+import HeaderLogoType from '../../assets/White_Logotype_Left_150DPI.png'
+import HeaderLogoMark from '../../assets/Pure_White_Mark_150DPI.png'
+import ButtonHeader from '../common/ButtonHeader.jsx'
+
+
+function NavBar() {
     return (
     <header>
+        
         <nav className="hidden lg:flex justify-between
                         gap-4 px-32 xl:px-48 py-12 ">
             <img src={HeaderLogoType} alt="Batam1Spa's Logo" className='h-[32px]' />
             <ul className="flex gap-4">
-                <ButtonHeader page="HOME" />
-                <ButtonHeader page="FACILITIES" />
-                <ButtonHeader page="SERVICES" />
-                <ButtonHeader page="CONTACT" />
+                <Link to="/">
+                    <button className="px-8">Home</button>
+                </Link>
+                <Link to="/Facilities">
+                    <button className="px-8">Facilities</button>
+                </Link>
+                <Link to="/Services">
+                    <button className="px-8">Services</button>
+                </Link>
+                <Link to="/Contact">
+                    <button className="px-8">Contact</button>
+                </Link>
             </ul>
         </nav>
 
@@ -31,4 +43,4 @@ function Header() {
     );
 }
 
-export default Header
+export default NavBar

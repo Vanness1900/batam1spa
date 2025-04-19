@@ -1,4 +1,4 @@
-import ImageContainer from "./ImageContainer.jsx";
+import ImageContainer from "../ui/ImageContainer.jsx";
 
 function CardGallery({src, altText = "Batam1Spa Image", title, category}) {
     return(

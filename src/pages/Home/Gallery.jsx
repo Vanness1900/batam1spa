@@ -1,10 +1,9 @@
-import CardGallery from "../components/CardGallery.jsx";
-import MasonryGrid from "../components/MasonryGrid.jsx";
-import Carousel from "../components/Carousel.jsx";
+import CardGallery from "../../components/cards/CardGallery.jsx";
+import MasonryGrid from "../../components/grids/MasonryGrid.jsx";
+import Carousel from "../../components/grids/Carousel.jsx";
 
-import GallerySquare from "../assets/GallerySquare.jpg";
-import GalleryVertical from "../assets/GalleryVertical.jpg";
-import GalleryHorizontal from "../assets/GalleryHorizontal.jpg";
+import GallerySquare from "../../assets/GallerySquare.jpg";
+import GalleryVertical from "../../assets/GalleryVertical.jpg";
 
 const Images = [
     {src: GallerySquare,
@@ -51,9 +50,10 @@ const Images = [
 
 function Gallery() {
     return(
-        <div className="py-8 space-y-8
-                        lg:py-12 lg:space-x-12
-                        xl:py-12">
+        <div    id="Gallery" 
+                className="
+                        py-8 lg:pt-12 xl:pt-18 lg:pb-0 xl:pb-0
+                        ">
             <div className="space-y-8">
                 <div className="space-y-4">
                     <div className="space-y-2">
