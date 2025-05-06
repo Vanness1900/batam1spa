@@ -14,16 +14,16 @@ function NavBar() {
             <img src={HeaderLogoType} alt="Batam1Spa's Logo" className='h-[32px]' />
             <ul className="flex gap-4">
                 <Link to="/">
-                    <button className="px-8">Home</button>
+                    <button className="px-8 font-primary">Home</button>
                 </Link>
                 <Link to="/Facilities">
-                    <button className="px-8">Facilities</button>
+                    <button className="px-8 font-primary">Facilities</button>
                 </Link>
                 <Link to="/Services">
-                    <button className="px-8">Services</button>
+                    <button className="px-8 font-primary">Services</button>
                 </Link>
                 <Link to="/Contact">
-                    <button className="px-8">Contact</button>
+                    <button className="px-8 font-primary">Contact</button>
                 </Link>
             </ul>
         </nav>

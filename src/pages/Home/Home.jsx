@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-import bannerImage from '../../assets/BannerHome.jpg'
+import HeroImage from '../../assets/BannerHome.jpg'
 
 import Hero from '../../components/sections/Hero.jsx'
 import Footer from '../../components/sections/Footer.jsx'
@@ -14,13 +14,11 @@ import FAQ from '../../components/sections/FAQ.jsx'
 import CTA from '../../components/sections/CTA.jsx'
 
 
-
-
 function Home() {
 
     return (
     <>
-        <Hero image={bannerImage} text={"UNPARALLELED SPA LUXURY"}/>
+        <Hero image={HeroImage} text={"UNPARALLELED SPA LUXURY"}/>
         <Whatsapp />
 
         <div className="px-8 md:px-16 lg:px-32 xl:px-48">
