@@ -2,8 +2,7 @@ import ImageContainer from '../ui/ImageContainer.jsx'
 
 import Button from '../common/Button.jsx'
 
-import CTAImage from '../../assets/CTAImage.jpg'
-
+import CTAImage from "../../assets/CTAImage.jpg"
 function CTA () {
     return(
         <div    id="CTA"
