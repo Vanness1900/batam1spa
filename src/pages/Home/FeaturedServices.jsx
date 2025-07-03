@@ -1,13 +1,14 @@
+import { Link } from 'react-router-dom'
+
 import ServicesImage from '../../assets/ServicesImage.jpg';
 
-import ImageContainer from '../../components/ui/ImageContainer.jsx'
-;
+import ImageContainer from '../../components/ui/ImageContainer.jsx';
 import Button from '../../components/common/Button.jsx';
 import ServiceList from '../../components/cards/ServiceList.jsx';
 
-function Services() {
+function FeaturedServices() {
     return (
-        <div    id="Services"
+        <div id="FeaturedServices"
             className="
             lg:grid lg:grid-cols-2 lg:items-center
             py-8 lg:py-12 xl:py-18
@@ -30,10 +31,12 @@ function Services() {
                     </div>
                 </div>
 
-                <Button text="More Services" />
+                <Link to="/Services">
+                    <Button text="More Services" />
+                </Link>
             </div>
         </div>
     );
 }
 
-export default Services;
+export default FeaturedServices;

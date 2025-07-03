@@ -25,7 +25,7 @@ function Facilities() {
                     </div>
                 </div>
                 
-                <div className="h-[1px] w-full bg-c-white-1"/>
+                <div className="h-[1px] w-full bg-c-black-3"/>
 
                 <div className="space-y-4">
                     <h2 className="uppercase text-c-gold-1">Location</h2>
@@ -34,7 +34,7 @@ function Facilities() {
                     </div>
                 </div>
 
-                <div className="h-[1px] w-full bg-c-white-1"/>
+                <div className="h-[1px] w-full bg-c-black-3"/>
 
                 <div className="space-y-4">
                     <h2 className="uppercase text-c-gold-1">Operating Hours</h2>
@@ -44,7 +44,7 @@ function Facilities() {
                     </div>
                 </div>
 
-                <div className="h-[1px] w-full bg-c-white-1"/>
+                <div className="h-[1px] w-full bg-c-black-3"/>
 
                 <div className="space-y-4">
                     <h2 className="uppercase text-c-gold-1">Follow us</h2>
@@ -54,7 +54,7 @@ function Facilities() {
                     </div>
                 </div>
 
-                <div className="h-[1px] w-full bg-c-white-1"/>
+                <div className="h-[1px] w-full bg-c-black-3"/>
                 
                 <div className="space-y-4">
                     <h2 className="uppercase text-c-gold-1">Parking Information</h2>
@@ -63,7 +63,7 @@ function Facilities() {
                     </div>
                 </div>
 
-                <div className="h-[1px] w-full bg-c-white-1"/>
+                <div className="h-[1px] w-full bg-c-black-3"/>
                 
                 <div className="space-y-4">
                     <h2 className="uppercase text-c-gold-1">Language Spoken</h2>
@@ -72,7 +72,7 @@ function Facilities() {
                     </div>
                 </div>
 
-                <div className="h-[1px] w-full bg-c-white-1"/>
+                <div className="h-[1px] w-full bg-c-black-3"/>
                 
                 <div className="space-y-4">
                     <h2 className="uppercase text-c-gold-1">Live Chat Option</h2>
@@ -81,6 +81,9 @@ function Facilities() {
                     </div>
                 </div>
             </div>
+
+            <Footer />
+            <Whatsapp />
         </>
     );
 }

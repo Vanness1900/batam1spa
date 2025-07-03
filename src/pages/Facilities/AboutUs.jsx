@@ -1,12 +1,14 @@
+import { Link } from 'react-router-dom'
+
 import FacilitiesAboutImage from '../../assets/FacilitiesAboutImage.jpg'
 
 import ImageContainer from '../../components/ui/ImageContainer.jsx'
 
 import Button from '../../components/common/Button.jsx';
 
-function About () {
+function AboutUs () {
     return (
-        <div    id="About" 
+        <div    id="AboutUs" 
                 className="lg:grid lg:grid-cols-2 lg:items-center
                         py-8 lg:py-12 xl:py-18
                         space-y-8 lg:space-y-0
@@ -21,10 +23,12 @@ function About () {
                     </div>
                     <p>As Batam’s largest spa, we offer luxurious treatments and a tranquil escape for your ultimate relaxation and well-being.</p>
                 </div>
-                <Button text="Explore Facilities"/>
+                <Link to="/Services">
+                    <Button text="Book a Service"/>
+                </Link>
             </div>
         </div>
     );
 }
 
-export default About
+export default AboutUs

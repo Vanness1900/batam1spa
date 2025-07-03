@@ -1,109 +1,160 @@
 import { Link } from 'react-router-dom'
 
 import Logo from '../../assets/Gold_Horizontal_Primary_150DPI.png'
+import PatternBg from '../../assets/Gold_Pattern A_Batam_1.svg'
 
 function Footer() {
     return(
-        <div className="
-                        grid grid-cols-2
-                        px-8 
-                        py-8 lg:py-12 xl:py-18
-                        space-y-8
-                        gap-4 lg:gap-12 xl:gap-24
-                        ">
-            <img src={Logo}
-                alt="Batam1Spa Logo" 
-                className=""
-                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}/>
+        <footer className="
+                            h-max xl:h-screen pt-16 lg:pt-32 pb-8 lg:pb-12 shadow-[0_-4px_10px_rgba(0,0,0,0.2)]">
+            <div className="relative h-full flex flex-col md:gap-12 xl:place-content-between">
+            
+                {/* Logo Section */}
+                <div className="px-8 md:px-16 lg:px-32 xl:px-48 pb-12 md:pb-0">
+                        {/* Placeholder for logo - replace with your actual logo */}
+                        <img src={Logo} alt="Logo" className="min-w-[200px] w-2/3 md:w-1/2 lg:w-1/3" />
+                </div>
 
+            {/* Main Footer Content - 4 Column Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-c-gold-1
+                            px-8 md:px-16 lg:px-32 xl:px-48 lg:pb-8">
+                {/* Column 1 - Home */}
+                <div>
+                    <h4 className="mb-4 md:mb-6 border-b-1 border-c-gold-1 pb-2 inline-block">HOME</h4>
+                    <ul className="space-y-2">
+                        <li>
+                            <Link to="/#OurStory" className="hover:text-c-white-1 transition-colors duration-200">
+                                Our Story
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/#FeaturedServices" className="hover:text-c-white-1 transition-colors duration-200">
+                                Featured Services
+                            </Link>
+                        </li>
+                    </ul>
+                </div>
+
+                {/* Column 2 - Facilities */}
+                <div>
+                    <h4 className="mb-4 md:mb-6 border-b-1 border-c-gold-1 pb-2 inline-block">FACILITIES</h4>
+                    <ul className="space-y-2">
+                        <li>
+                            <Link to="/Facilities#AboutUs" className="hover:text-c-white-1 transition-colors duration-200">
+                                About Us
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/Facilities#FacilitiesList" className="hover:text-c-white-1 transition-colors duration-200">
+                                Facilities List
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/Facilities#Gallery" className="hover:text-c-white-1 transition-colors duration-200">
+                                Gallery
+                            </Link>
+                        </li>
+                    </ul>
+                </div>
+
+                {/* Column 3 - Services */}
+                <div>
+                    <h4 className="mb-4 md:mb-6 border-b-1 border-c-gold-1 pb-2 inline-block">SERVICES</h4>
+                    <ul className="space-y-2">
+                        <li>
+                            <Link to="/Services" className="hover:text-c-white-1 transition-colors duration-200">
+                                Book a Service
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/Services" className="hover:text-c-white-1 transition-colors duration-200">
+                                See Full Menu
+                            </Link>
+                        </li>
+                    </ul>
+                </div>
+
+                {/* Column 4 - Contact */}
+                <div>
+                    <h4 className="mb-4 md:mb-6 border-b-1 border-c-gold-1 pb-2 inline-block">CONTACT</h4>
+                    <div className="space-y-2">
+                        <p>(+62) 822 8888 8888</p>
+                        <p>ContactBatam1Spa@gmail.com</p>
+
+                        <div className="flex space-x-2">
+                            <a href="#" className="underline hover:text-c-white-1 transition-colors duration-200">
+                                Instagram
+                            </a>
+                            <p>|</p>
+                            <a href="#" className="underline hover:text-c-white-1 transition-colors duration-200">
+                                Tiktok
+                            </a>
+                            <p>|</p>
+                            <a href="#" className="underline hover:text-c-white-1 transition-colors duration-200">
+                                Facebook
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* Location Section - Also 4 columns */}
             <div>
-                <span>Services</span>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8 text-c-gold-1
+                                px-8 md:px-16 lg:px-32 xl:px-48 ">
+                    <div>
+                        <h4 className="mb-2 hidden lg:block">LOCATION</h4>
+                    </div>
+                    
+                    <div></div>
+                    
+                    <div>
+                        <h4 className="mb-2 hidden lg:block">INDONESIA</h4>
+                    </div>
+
+                    <div>
+                        <h4 className="mb-2 hidden lg:block">KOTA BATAM</h4>
+                    </div>
+                </div>
+
+                <div className="relative ">
+                        {/* Background Pattern */}
+                        <div 
+                            className="absolute inset-0 -bottom-8 lg:-bottom-12 bg-cover bg-center opacity-10 pb-8"
+                            style={{ backgroundImage: `url(${PatternBg})` }}
+                        ></div>
+
+                    {/* HR Line */}
+                        <div className="h-[1px] w-full bg-c-gold-1 relative z-10 " />
+
+                    {/* Location Details */}
+                        <div className="grid lg:grid-cols-4 gap-8 text-c-gold-1 px-8 md:px-16 lg:px-32 xl:px-48 relative z-10 pb-8 md:pb-12 lg:pb-16">
+                            <div className="hidden lg:block"></div>
+                            <div className="hidden lg:block"></div>
+                            <div className="hidden lg:block"></div>
+                            <div className="mt-6 space-y-2">
+                                <h4 className="mb-4 md:mb-6 border-b-1 border-c-gold-1 pb-2 inline-block lg:hidden">LOCATION</h4>               
+                                <p>Komplek sarana wisata batamia,</p>
+                                <p>Jl. Komp. Bumi Indah,</p>
+                                <p>Kota Batam, Indonesia, 29432</p>
+                            </div>
+                        </div>
+
+                    {/* Bottom Bar */}
+                        <div className="grid grid-cols-1 md:grid-cols-4 gap-2 lg:gap-8 text-c-gold-1 px-8 md:px-16 lg:px-32 xl:px-48 relative z-10">
+                            <p className="text-c-p5">© 2024 Batam 1 Spa</p>
+                            <p className="text-c-p5">All Rights Reserved.</p>
+                            <a href="#" className="text-c-p5 underline hover:text-c-white-1 transition-colors duration-200">
+                                Privacy Policy
+                            </a>
+                            <a href="#" className="text-c-p5 underline hover:text-c-white-1 transition-colors duration-200">
+                                Terms & Conditions
+                            </a>
+                        </div>
+                </div>
             </div>
         </div>
-
-
-        // <div className="
-        //                 px-8 
-        //                 py-8 lg:py-12 xl:py-18
-        //                 space-y-8
-        //                 lg:gap-12 xl:gap-24
-        //                 ">
-        //     <img src={Logo}
-        //             alt="Batam1Spa Logo" 
-        //             className="w-1/2"
-        //             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}/>
-
-        //     <div className="
-        //                     grid grid-rows-4 gap-8
-        //                     ">
-        //         <div className="flex flex-col space-y-2">
-        //             <Link to="/">
-        //                 <button className="hover:text-c-gold-1"
-        //                         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        //                         >Home</button>
-        //                 <div className="h-[1px] bg-c-gold-1" />
-        //             </Link>
-        //             <Link to="/">
-        //                 <p>Our Story</p>
-        //             </Link>
-        //             <Link to="/">
-        //                 <p>Featured Services</p>
-        //             </Link>
-        //         </div>
-
-        //         <Link to="/Facilities">
-        //             <button className="hover:text-c-gold-1">Facilities</button>
-        //             <div className="h-[1px] bg-c-gold-1" />
-        //         </Link>
-
-        //         <Link to="/Services">
-        //             <button className="hover:text-c-gold-1">Services</button>
-        //             <div className="h-[1px] bg-c-gold-1" />
-        //         </Link>
-
-        //         <Link to="/Contact">
-        //             <button className="hover:text-c-gold-1">Contact</button>
-        //             <div className="h-[1px] bg-c-gold-1" />
-        //         </Link>
-        //     </div>
-
-        //     <div className="space-y-2
-        //                     hidden lg:block">
-        //         <div className="
-        //                         grid grid-cols-4 gap-8
-                                
-        //                         ">
-        //             <span className="col-span-1 uppercase text-c-gold-1">Location</span>
-        //             <span className="col-span-1 uppercase text-c-gold-1">Indonesia</span>
-        //             <span className="col-span-2 uppercase text-c-gold-1">Kota Batam</span>
-        //         </div>
-
-        //         <div className="h-[1px] bg-c-gold-1"/>
-
-        //         <div className="
-        //                         grid grid-cols-4 gap-8
-                                
-        //                         ">
-        //             <span className="col-span-1"></span>
-        //             <span className="col-span-1"></span>
-        //             <span className="col-span-2 text-c-gold-1">Komplek sarana wisata batamia,
-        //                                                 Jl. Komp. Bumi Indah,
-        //                                                 Kota Batam, Indonesia, 29432
-        //             </span>
-        //         </div>
-        //     </div>
-
-        //     <div className="
-        //                     space-y-1
-        //                     ">
-        //         <div className="flex justify-center items-center gap-2">
-        //             <span className="uppercase underline text-c-p6 text-c-gold-1 hover:text-c-white-1">Privacy Policy</span>
-        //             <div class="size-1 bg-c-gold-1 rounded-full min-w-1"></div>
-        //             <span className="uppercase underline text-c-p6 text-c-gold-1 hover:text-c-white-1">Terms & Conditions</span>
-        //         </div>
-        //         <span className="flex justify-center text-[8px] uppercase text-c-gold-1">© 2024 Batam 1 Spa. All Rights Reserved.</span>
-        //     </div>
-        // </div>
+    </footer>
     );
 }
 
