@@ -51,12 +51,17 @@
         font-family: var(--font-primary);
         font-size: var(--text-lg);
     }
-    h6 {
+    h6, label {
         font-family: var(--font-primary);
         font-size: var(--text-base);
     }
 
     p {
+        font-family: var(--font-secondary);
+        font-size: var(--text-c-p3);
+    }
+
+    li {
         font-family: var(--font-secondary);
         font-size: var(--text-c-p3);
     }
@@ -71,10 +76,16 @@
         font-size: var(--text-c-p3);
     }
 
+    option {
+        font-family: var(--font-secondary);
+        font-size: var(--text-c-p3);
+    }
+
     body {
         background-color: var(--color-c-black-1);
         color: var(--color-c-white-1);
     }
+
 
 
     @media (min-width: 768px) {
@@ -83,8 +94,8 @@
         h3 { font-size: var(--text-3xl); }
         h4 { font-size: var(--text-2xl); }
         h5 { font-size: var(--text-xl); }
-        h6 { font-size: var(--text-lg); }
-        p, a { font-size: var(--text-c-p3); }
+        h6, label { font-size: var(--text-lg); }
+        p, a, li, option, span { font-size: var(--text-c-p3); }
     }
 
     @media (min-width: 1024px) {
@@ -93,8 +104,8 @@
         h3 { font-size: var(--text-3xl); }
         h4 { font-size: var(--text-2xl); }
         h5 { font-size: var(--text-xl); }
-        h6 { font-size: var(--text-lg); }
-        p, a { font-size: var(--text-c-p3); }
+        h6, label { font-size: var(--text-lg); }
+        p, a, li, option, span { font-size: var(--text-c-p3); }
     }
     
     @media (min-width: 1536px) {
@@ -103,9 +114,30 @@
         h3 { font-size: var(--text-4xl); }
         h4 { font-size: var(--text-3xl); }
         h5 { font-size: var(--text-2xl); }
-        h6 { font-size: var(--text-xl); }
-        p, a { font-size: var(--text-c-p2); }
+        h6, label { font-size: var(--text-xl); }
+        p, a, li, option, span { font-size: var(--text-c-p2); }
     }
 }
 
+/* Target the scrollbar in WebKit-based browsers (Chrome, Safari, Opera GX) */
+::-webkit-scrollbar {
+    height: 8px; /* Height of the horizontal scrollbar */
+    width: 8px; /* Width of the vertical scrollbar */
+}
 
+/* Style the track (the bar the scrollbar moves along) */
+::-webkit-scrollbar-track {
+    background: #504E4E; /* A dark color that matches your background */
+    border-radius: 4px;
+}
+
+/* Style the thumb (the draggable part of the scrollbar) */
+::-webkit-scrollbar-thumb {
+    background: #CDAC81; /* A gold/bronze color from your design */
+    border-radius: 4px;
+}
+
+/* Optional: Style the thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #CDAC81; /* A slightly lighter shade for hover effect */
+}

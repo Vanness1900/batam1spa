@@ -1,7 +1,7 @@
 import TopBar from "../components/sections/TopBar.jsx"
 import { Outlet } from "react-router-dom"
 
-function Layout() {
+function MainLayout() {
     return(
         <>
             <TopBar />
@@ -10,4 +10,4 @@ function Layout() {
     )
 }
 
-export default Layout
+export default MainLayout
