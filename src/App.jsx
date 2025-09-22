@@ -12,23 +12,26 @@ import Error404 from './pages/Error/Error404.jsx'
 
 import MainLayout from './layouts/MainLayout.jsx'
 import ScrollToHash from './components/ScrollToHash.jsx'
+import { ServiceProvider } from './context/ServicesContext.jsx' // Import the provider
 
 function App() {
   return (
-    <Router>
-      <ScrollToHash />
-      <Routes>
-        <Route element={<MainLayout/>}>
-          <Route path="/" element={<Home />} />
-          <Route path="/Facilities" element={<Facilities />} />
-          <Route path="/Services" element={<Services />} />
-          <Route path="/Contact" element={<Contact />} />
-          <Route path="/Cart" element={<Cart />} />
-          <Route path="/Confirmation" element={<Confirmation />} />
-        </Route>
-          <Route path="/Error404" element={<Error404 />} />
-      </Routes>
-    </Router>
+    <ServiceProvider> {/* Wrap your entire app */}
+      <Router>
+        <ScrollToHash />
+        <Routes>
+          <Route element={<MainLayout/>}>
+            <Route path="/" element={<Home />} />
+            <Route path="/Facilities" element={<Facilities />} />
+            <Route path="/Services" element={<Services />} />
+            <Route path="/Contact" element={<Contact />} />
+            <Route path="/Cart" element={<Cart />} />
+            <Route path="/Confirmation" element={<Confirmation />} />
+          </Route>
+            <Route path="/Error404" element={<Error404 />} />
+        </Routes>
+      </Router>
+    </ServiceProvider>
   );
 }
 

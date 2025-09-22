@@ -1,19 +1,19 @@
-import ImageContainer from '../ui/ImageContainer.jsx'; // Make sure this import is correct
+import ImageContainer from '../ui/ImageContainer.jsx';
 
-function CardServices({ image, title, duration, description, included, lprice, tprice }) {
+function CardServices({ id, image, title, duration, description, included, lprice, tprice }) {
     return (
         <div className="space-y-4">
             <ImageContainer
-                image = {image}
-                altText = {title}
-                description = {description}
-                aspectRatio = "3/2"
-                type = "service"
-                duration = {duration}
+                id={id} // Pass the ID prop
+                image={image}
+                altText={title}
+                description={description}
+                aspectRatio="3/2"
+                type="service"
+                duration={duration}
                 included={included}
                 lprice={lprice}
                 tprice={tprice}
-
             />
             <div className="space-y-1">
                 <h5 className="uppercase text-c-gold-1">{title}</h5>
