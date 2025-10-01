@@ -198,14 +198,14 @@ function ImageContainer({
             {/* Modal for service view */}
             {type === "service" && modalOpen && (
                 <ImageModal open={modalOpen} onClose={handleCloseModal}>
-                    <div className="flex space-x-8">
-                        <div className="relative w-[60vw] h-[90vh] bg-c-black-1 rounded-2xl shadow-2xl grid grid-cols-3">
+                    <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8">
+                        <div className="relative w-full md:w-[50vw] lg:w-[60vw] xl:w-[70vw] h-[50vh] md:h-[90vh] bg-c-black-1 rounded-2xl shadow-2xl flex flex-col lg:grid lg:grid-cols-3">
                             <img 
                                 src={image} 
                                 alt={altText} 
-                                className="w-auto h-full object-cover rounded-l-2xl"
+                                className="w-full lg:w-auto h-36 lg:h-full object-cover rounded-t-2xl lg:rounded-l-2xl lg:rounded-tr-none"
                             />
-                            <div className="col-span-2 p-8 overflow-y-auto space-y-12">
+                            <div className="col-span-1 md:col-span-2 p-4 sm:p-6 md:p-8 overflow-y-auto space-y-6 sm:space-y-8 md:space-y-12">
                                 <div className="space-y-2">
                                     <h4 className="uppercase text-c-gold-1">{altText}</h4>
                                     <p className="text-c-white-1">{description}</p>
@@ -255,99 +255,97 @@ function ImageContainer({
                             </div>
                         </div>
 
-                        <form className="relative bg-c-black-1 w-[20vw] h-[90vh] rounded-2xl shadow-2xl flex flex-col place-content-between p-8">
-                            <div className="space-y-4">
+                        <form className="relative bg-c-black-1 w-full md:w-[40vw] xl:w-[20vw] h-auto md:h-[90vh] rounded-2xl shadow-2xl flex flex-col place-content-between p-4 sm:p-6 md:p-8">
+                            <div>
                                 <h4 className="uppercase text-c-gold-1 border-b-1 border-c-gold-1">Booking Details</h4>
-
-                                {/* Quantity */}
-                                <div className="space-y-2">
-                                    <h6 className="uppercase text-c-white-1"><label>Quantity</label></h6>
-                                    <div className="flex justify-around border-1 border-c-white-1 h-10 place-items-center rounded-lg px-4">
-                                        <svg onClick={() => updatePax(-1)} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-4 cursor-pointer w-full">
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14" />
-                                        </svg>
-                                        <p className="text-c-white-1 w-full text-center">{pax}</p>
-                                        <svg onClick={() => updatePax(1)} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-4 cursor-pointer w-full">
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-                                        </svg>
-                                    </div>
-                                </div>
-
-                                {/* Duration */}
-                                <div className="space-y-2">
-                                    <h6 className="uppercase text-c-white-1"><label>Duration</label></h6>
-                                    <select 
-                                        name="duration"
-                                        value={selectedDuration}
-                                        onChange={(e) => setSelectedDuration(parseInt(e.target.value))}
-                                        className="bg-transparent outline-none w-full flex justify-around border-1 border-c-white-1 h-10 place-items-center rounded-lg px-4 font-secondary text-c-p3 xl:text-c-p2"
-                                    >
-                                        {duration && duration.map(dur => (
-                                            <option key={dur} value={dur} className="bg-c-black-1">
-                                                {dur} minutes
-                                            </option>
-                                        ))}
-                                    </select>
-                                </div>
-
-                                {/* Date */}
-                                <div className="space-y-2">
-                                    <h6 className="uppercase text-c-white-1">
-                                        <label>Date {!isDateSelected && <span className="text-red-400">*Required</span>}</label>
-                                    </h6>
-                                    <div className="relative cursor-pointer" onClick={() => document.querySelector('input[name="date"]').showPicker()}>
-                                        <input 
-                                            type="date" 
-                                            name="date"
-                                            value={selectedDate}
-                                            onChange={(e) => setSelectedDate(e.target.value)}
-                                            className={`bg-transparent outline-none w-full border-1 h-10 rounded-lg px-4 pr-12 text-c-white-1 font-secondary text-c-p3 xl:text-c-p2
-                                                    cursor-pointer focus:border-c-white-1 focus:ring-1 focus:ring-c-white-1
-                                                    [&::-webkit-calendar-picker-indicator]:opacity-0 
-                                                    [&::-webkit-calendar-picker-indicator]:absolute
-                                                    [&::-webkit-calendar-picker-indicator]:right-0
-                                                    [&::-webkit-calendar-picker-indicator]:w-full
-                                                    [&::-webkit-calendar-picker-indicator]:h-full
-                                                    [&::-webkit-calendar-picker-indicator]:cursor-pointer
-                                                    ${isDateSelected ? 'border-c-white-1' : 'border-red-500'}
-                                            `}
-                                            min={minDate}
-                                            max={maxDate}
-                                            required
-                                        />
-                                        <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none">
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4">
-                                                <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" />
+                                <div className="grid grid-cols-2 md:flex md:flex-col gap-4 pt-4">
+                                    {/* Quantity */}
+                                    <div className="space-y-2">
+                                        <h6 className="uppercase text-c-white-1"><label>Quantity</label></h6>
+                                        <div className="flex justify-around border-1 border-c-white-1 h-10 place-items-center rounded-lg px-4">
+                                            <svg onClick={() => updatePax(-1)} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-4 cursor-pointer w-full">
+                                                <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14" />
+                                            </svg>
+                                            <p className="text-c-white-1 w-full text-center">{pax}</p>
+                                            <svg onClick={() => updatePax(1)} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-4 cursor-pointer w-full">
+                                                <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
                                             </svg>
                                         </div>
                                     </div>
-                                    {!isDateSelected && (
-                                        <p className="text-red-400 text-sm">Please select a date to continue</p>
-                                    )}
-                                </div>
 
-                                {/* Check In */}
-                                <div className="space-y-2">
-                                    <h6 className="uppercase text-c-white-1"><label>Check In</label></h6>
-                                    <select 
-                                        name="checkin"
-                                        value={selectedTime}
-                                        onChange={(e) => setSelectedTime(e.target.value)}
-                                        className="bg-transparent outline-none w-full flex justify-around border-1 border-c-white-1 h-10 place-items-center rounded-lg px-4 font-secondary text-c-p3 xl:text-c-p2"
-                                    >
-                                        <option value="10" className="bg-c-black-1">10:00</option>
-                                        <option value="11" className="bg-c-black-1">11:00</option>
-                                        <option value="12" className="bg-c-black-1">12:00</option>
-                                        <option value="13" className="bg-c-black-1">13:00</option>
-                                        <option value="14" className="bg-c-black-1">14:00</option>
-                                        <option value="15" className="bg-c-black-1">15:00</option>
-                                        <option value="16" className="bg-c-black-1">16:00</option>
-                                    </select>
+                                    {/* Duration */}
+                                    <div className="space-y-2">
+                                        <h6 className="uppercase text-c-white-1"><label>Duration</label></h6>
+                                        <select 
+                                            name="duration"
+                                            value={selectedDuration}
+                                            onChange={(e) => setSelectedDuration(parseInt(e.target.value))}
+                                            className="bg-transparent outline-none w-full flex justify-around border-1 border-c-white-1 h-10 place-items-center rounded-lg px-4 font-secondary text-c-p3 xl:text-c-p2"
+                                        >
+                                            {duration && duration.map(dur => (
+                                                <option key={dur} value={dur} className="bg-c-black-1">
+                                                    {dur} minutes
+                                                </option>
+                                            ))}
+                                        </select>
+                                    </div>
+
+                                    {/* Date */}
+                                    <div className="space-y-2">
+                                        <h6 className="uppercase text-c-white-1">
+                                            <label>Date {!isDateSelected && <span className="text-xs text-red-400">*Required</span>}</label>
+                                        </h6>
+                                        <div className="relative cursor-pointer" onClick={() => document.querySelector('input[name="date"]').showPicker()}>
+                                            <input 
+                                                type="date" 
+                                                name="date"
+                                                value={selectedDate}
+                                                onChange={(e) => setSelectedDate(e.target.value)}
+                                                className={`bg-transparent outline-none w-full border-1 h-10 rounded-lg px-4 pr-12 text-c-white-1 font-secondary text-c-p3 xl:text-c-p2
+                                                        cursor-pointer focus:border-c-white-1 focus:ring-1 focus:ring-c-white-1
+                                                        [&::-webkit-calendar-picker-indicator]:opacity-0 
+                                                        [&::-webkit-calendar-picker-indicator]:absolute
+                                                        [&::-webkit-calendar-picker-indicator]:right-0
+                                                        [&::-webkit-calendar-picker-indicator]:w-full
+                                                        [&::-webkit-calendar-picker-indicator]:h-full
+                                                        [&::-webkit-calendar-picker-indicator]:cursor-pointer
+                                                        ${isDateSelected ? 'border-c-white-1' : 'border-red-500'}
+                                                `}
+                                                min={minDate}
+                                                max={maxDate}
+                                                required
+                                            />
+                                            <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none">
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Check In */}
+                                    <div className="space-y-2">
+                                        <h6 className="uppercase text-c-white-1"><label>Check In</label></h6>
+                                        <select 
+                                            name="checkin"
+                                            value={selectedTime}
+                                            onChange={(e) => setSelectedTime(e.target.value)}
+                                            className="bg-transparent outline-none w-full flex justify-around border-1 border-c-white-1 h-10 place-items-center rounded-lg px-4 font-secondary text-c-p3 xl:text-c-p2"
+                                        >
+                                            <option value="10" className="bg-c-black-1">10:00</option>
+                                            <option value="11" className="bg-c-black-1">11:00</option>
+                                            <option value="12" className="bg-c-black-1">12:00</option>
+                                            <option value="13" className="bg-c-black-1">13:00</option>
+                                            <option value="14" className="bg-c-black-1">14:00</option>
+                                            <option value="15" className="bg-c-black-1">15:00</option>
+                                            <option value="16" className="bg-c-black-1">16:00</option>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
 
                             {/* Buttons with date validation */}
-                            <div className="flex flex-col space-y-4 w-full">
+                            <div className="flex flex-col space-y-4 w-full mt-6 md:mt-0">
                                 <Button 
                                     text={isAdded ? "Added to Cart!" : "Add To Cart"} 
                                     onClick={handleAddToCart}

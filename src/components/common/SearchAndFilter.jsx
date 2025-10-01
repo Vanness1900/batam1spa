@@ -22,16 +22,16 @@ function SearchAndFilter({ onSearchChange, onFilterChange, activeFilter }) {
 
     return (
         <div className="pb-12">
-            <div className="flex flex-col md:flex-row gap-4 md:gap-8 items-center">
+            <div className="flex flex-col xl:flex-row gap-4 xl:gap-8 items-center">
                 {/* Search Bar */}
-                <div className="flex-1 w-full md:w-auto">
+                <div className="flex-1 w-full xl:w-auto">
                     <div className="relative">
                         <input
                             type="text"
                             value={searchTerm}
                             onChange={handleSearchChange}
                             placeholder="Search for services..."
-                            className="w-full max-w-[600px] h-12 pl-12 pr-4 border-1 border-c-white-1 rounded-lg bg-transparent text-c-white-1 placeholder-c-black-3 focus:outline-none focus:border-c-gold-2 transition-colors"
+                            className="w-full min-w-[200px] xl:max-w-[600px] h-12 pl-12 pr-4 border-1 border-c-white-1 rounded-lg bg-transparent text-c-white-1 placeholder-c-black-3 focus:outline-none focus:border-c-gold-2 transition-colors"
                         />
                         <div className="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none">
                             <svg xmlns="http://www.w3.org/2000/svg" className="size-5 text-c-white-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
