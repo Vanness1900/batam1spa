@@ -55,9 +55,9 @@ function CardCart({ item, isConfirmation = false }) {
 
     return (
         <>
-            <div className="grid grid-cols-5 gap-8 h-fit py-8 border-b-1 border-c-black-3">
+            <div className="flex flex-col md:grid md:grid-cols-5 gap-4 md:gap-8 h-fit py-8 border-b-1 border-c-black-3">
                 {/* Service Image - Made more vertical/portrait */}
-                <div className="h-32 w-full rounded-lg overflow-hidden aspect-[3/4]">
+                <div className="h-32 sm:h-36 md:h-24 w-full rounded-lg overflow-hidden aspect-[3/4]">
                     <img 
                         src={item.image} 
                         alt={item.title}
@@ -66,15 +66,15 @@ function CardCart({ item, isConfirmation = false }) {
                 </div>
 
                 {/* Service Information */}
-                <div className="flex flex-col justify-between gap-8 col-span-4">
+                <div className="flex flex-col justify-between gap-4 sm:gap-6 md:gap-8 col-span-1 md:col-span-4">
                     <div className="flex flex-col gap-4">
                         <div className="flex justify-between items-start">
                             <h4 className="uppercase">{item.title}</h4>
-                            <span className="text-xs text-c-black-3">Cart ID: {item.cartId || 'Missing'}</span>
+                            <span className="hidden text-xs text-c-black-3">Cart ID: {item.cartId || 'Missing'}</span>
                         </div>
 
                         {/* Details */}
-                        <div className="grid grid-cols-4">
+                        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-0">
                             <div className="flex flex-col gap-1 justify-end">
                                 <span className="text-c-gold-1">Details</span>
                                 <span className="text-c-black-3">Duration</span>
@@ -107,7 +107,7 @@ function CardCart({ item, isConfirmation = false }) {
 
                     {/* Action buttons - only show in cart, not confirmation */}
                     {!isConfirmation && (
-                        <div className="grid grid-cols-4">
+                        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-0">
                             <button 
                                 onClick={handleRemove}
                                 className="uppercase text-lg text-c-black-3 underline hover:text-red-500 transition-all text-left"

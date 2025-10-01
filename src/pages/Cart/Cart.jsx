@@ -60,9 +60,9 @@ function Cart() {
     };
 
     return (
-        <div className="h-screen w-full overflow-hidden grid grid-cols-1 lg:grid-cols-[7fr_3fr]">
+        <div className="h-screen w-full overflow-hidden flex flex-col lg:grid lg:grid-cols-1 lg:grid-cols-[7fr_3fr]">
             {/* Left Panel: Shopping Cart */}
-            <div className="flex flex-col overflow-hidden pt-20 px-8 md:px-16 lg:pl-32 xl:pl-48 lg:pr-16">
+            <div className="flex flex-col overflow-hidden h-[70vh] lg:h-full pt-4 md:pt-12 lg:pt-20 px-4 md:px-16 lg:pl-32 xl:pl-48 lg:pr-16">
                 {/* Fixed Header */}
                 <div className="flex-shrink-0">
                     <div className="flex justify-between border-b-1 border-c-white-1 pb-4">
@@ -108,7 +108,7 @@ function Cart() {
                 </div>
 
                 {/* Fixed Footer */}
-                <div className="pb-8">
+                <div className="pb-4 md:pb-8">
                     <div className="flex justify-between items-center mb-4 border-y-1 border-c-white-1">
                         <h2 className="uppercase py-4">Total Cost</h2>
                         {cart.length > 0 && (
@@ -135,25 +135,53 @@ function Cart() {
             </div>
 
             {/* Right Panel: Booking Form - Fixed, No Scroll */}
-            <div className="bg-c-black-2 overflow-hidden">
-                <form onSubmit={handleSubmit} className="h-full px-8 md:px-16 lg:pl-16 lg:pr-32 xl:pr-48 pt-8 space-y-8 overflow-y-auto pt-20">
-                    <h2 className="uppercase pb-4 border-b border-c-white-1">Contact</h2>
+            <div className="bg-c-black-2 overflow-hidden h-[45vh] lg:h-full">
+                <form onSubmit={handleSubmit} className="h-full px-4 md:px-16 lg:pl-16 lg:pr-32 xl:pr-48 py-4 md:py-8 space-y-4 md:space-y-8 overflow-y-auto lg:pt-20">
+                    <h2 className="uppercase mb-4 pb-2 md:pb-4 border-b border-c-white-1">Contact</h2>
 
                     {/* Inputs */}
-                    <div className="space-y-4">
-                        <div>
-                            <h6 className="uppercase">Full Name</h6>
-                            <input
-                                type="text"
-                                name="fullName"
-                                value={formData.fullName}
-                                onChange={handleInputChange}
-                                placeholder="Full Name"
-                                className="bg-c-white-1 w-full h-10 rounded-lg text-c-black-1 px-4 font-secondary text-c-p4"
-                                required
-                            />
+                    <div className="space-y-2">
+                        <div className="flex gap-4 w-full lg:flex-col">
+                            <div className="space-y-1 w-full">
+                                <h6 className="uppercase">Full Name</h6>
+                                <input
+                                    type="text"
+                                    name="fullName"
+                                    value={formData.fullName}
+                                    onChange={handleInputChange}
+                                    placeholder="Full Name"
+                                    className="bg-c-white-1 w-full h-10 rounded-lg text-c-black-1 px-4 font-secondary text-c-p4"
+                                    required
+                                />
+                            </div>
+                            <div className="space-y-1 w-full">
+                                <h6 className="uppercase">Phone Number</h6>
+                                <div className="flex gap-2">
+                                    <select 
+                                        name="countryCode"
+                                        value={formData.countryCode}
+                                        onChange={handleInputChange}
+                                        className="bg-c-white-1 w- max-w-[80px] h-10 rounded-lg text-c-black-1 px-4 font-secondary text-c-p4"
+                                    >
+                                        <option value="+62">+62</option>
+                                        <option value="+65">+65</option>
+                                    </select>
+                                    <input
+                                        type="tel"
+                                        name="phone"
+                                        value={formData.phone}
+                                        onChange={handleInputChange}
+                                        placeholder="82288888888"
+                                        className={`bg-c-white-1 w-full h-10 rounded-lg text-c-black-1 px-4 font-secondary text-c-p4 ${phoneError ? 'border-2 border-red-500' : ''}`}
+                                        required
+                                    />
+                                </div>
+                                {phoneError && (
+                                    <p className="text-red-500 text-sm mt-1">{phoneError}</p>
+                                )}
+                            </div>
                         </div>
-                        <div>
+                        <div className="space-y-1">
                             <h6 className="uppercase">Email</h6>
                             <input
                                 type="email"
@@ -174,32 +202,6 @@ function Cart() {
                                 />
                                 I want to be notified for newsletters.
                             </label>
-                        </div>
-                        <div>
-                            <h6 className="uppercase">Phone Number</h6>
-                            <div className="flex gap-2">
-                                <select 
-                                    name="countryCode"
-                                    value={formData.countryCode}
-                                    onChange={handleInputChange}
-                                    className="bg-c-white-1 max-w-[80px] h-10 rounded-lg text-c-black-1 px-4 font-secondary text-c-p4"
-                                >
-                                    <option value="+62">+62</option>
-                                    <option value="+65">+65</option>
-                                </select>
-                                <input
-                                    type="tel"
-                                    name="phone"
-                                    value={formData.phone}
-                                    onChange={handleInputChange}
-                                    placeholder="82288888888"
-                                    className={`bg-c-white-1 w-full h-10 rounded-lg text-c-black-1 px-4 font-secondary text-c-p4 ${phoneError ? 'border-2 border-red-500' : ''}`}
-                                    required
-                                />
-                            </div>
-                            {phoneError && (
-                                <p className="text-red-500 text-sm mt-1">{phoneError}</p>
-                            )}
                         </div>
                     </div>
 
