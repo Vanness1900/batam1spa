@@ -36,14 +36,14 @@ function Confirmation() {
     return (
         <div className="h-screen w-full overflow-hidden grid grid-cols-1 lg:grid-cols-[5fr_5fr]">
             {/* left panel */}
-            <div className="flex flex-col pt-20 pb-8 place-content-center px-8 md:px-16 lg:pl-32 xl:pl-48 lg:pr-16 gap-16">
+            <div className="flex flex-col h-fit lg:h-screen py-8 lg:pt-20 lg:pb-8 place-content-center px-4 md:px-8 lg:pl-32 xl:pl-48 lg:pr-16 gap-8 lg:gap-16">
                 <div className="space-y-2 w-full">
-                    <h6 className="uppercase">Thank you for choosing Batam1Spa</h6>
-                    <h2 className="text-c-gold-1 uppercase max-w-[75%]">You're all set and ready to relax!</h2>
-                    <p className="text-c-black-3 max-w-[75%]">A confirmation email/SMS with your booking details has been sent. Please check your inbox and spam folder.</p>
+                    <h6 className="text-center md:text-left w-full uppercase">Thank you for choosing Batam1Spa</h6>
+                    <h2 className="text-center md:text-left w-full text-c-gold-1 uppercase lg:max-w-[75%]">You're all set and ready to relax!</h2>
+                    <p className="pt-2 text-center md:text-left w-full text-c-black-3 lg:max-w-[75%]">A confirmation email/SMS with your booking details has been sent. Please check your inbox and spam folder.</p>
                 </div>
 
-                <div className="space-y-2">
+                <div className="space-y-2 hidden md:block">
                     <h4 className="uppercase">Reservation Information</h4>
                     <div className="flex gap-16">
                         <div className="text-c-black-3 flex flex-col">
@@ -70,22 +70,21 @@ function Confirmation() {
             </div>
 
             {/* right panel */}
-            <div className="flex flex-col overflow-hidden bg-c-black-2 pt-20 pb-8 px-8 md:px-16 lg:pr-32 xl:pr-48 lg:pl-16">
+            <div className="flex flex-col overflow-hidden bg-c-black-2 py-4 lg:pt-20 lg:pb-8 px-4 md:px-8 lg:pr-32 xl:pr-48 lg:pl-16">
                 <h2 className="uppercase border-b-1 border-c-white-1 pb-4 flex-shrink-0">Booking Summary</h2>
 
                 {/* Scrollable Services List */}
-                <div className="overflow-y-auto h-fill">
-                    <div className="flex flex-col h-fill">
+                <div className="overflow-y-auto h-full">
+                    <div className="flex flex-col h-full">
                         {confirmedCart.length === 0 ? (
                             <div className="flex items-center justify-center h-full">
                                 <p className="text-c-white-1">No services booked</p>
                             </div>
                         ) : (
-                            // Use cartId as key for proper React rendering
                             confirmedCart.map(item => (
-                                <div key={item.cartId || item.id} className="grid grid-cols-5 gap-8 h-fit py-8 border-b-1 border-c-white-1">
+                                <div key={item.cartId || item.id} className="flex flex-col md:grid md:grid-cols-4 gap-4 md:gap-8 h-fit py-4 md:py-8 border-b-1 border-c-white-1">
                                     {/* Service Image */}
-                                    <div className="h-24 w-full rounded-lg overflow-hidden">
+                                    <div className="h-32 sm:h-36 md:h-24 w-full rounded-lg overflow-hidden aspect-[3/4] md:hidden">
                                         <img 
                                             src={item.image} 
                                             alt={item.title}
@@ -94,12 +93,12 @@ function Confirmation() {
                                     </div>
 
                                     {/* Service Information */}
-                                    <div className="flex flex-col justify-between gap-8 col-span-4">
+                                    <div className="flex flex-col justify-between gap-4 sm:gap-6 md:gap-8 col-span-1 md:col-span-4">
                                         <div className="flex flex-col">
                                             <h4 className="uppercase text-c-white-1">{item.title}</h4>
 
                                             {/* Details */}
-                                            <div className="grid grid-cols-4 pr-4">
+                                            <div className="grid grid-cols-2 sm:grid-cols-4 sm:gap-0 pr-0">
                                                 <div className="flex flex-col gap-1 justify-end">
                                                     <span className="text-c-black-4">Duration</span>
                                                     <span className="text-c-black-4">Date</span>
